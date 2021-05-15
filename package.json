@@ -1,0 +1,23 @@
+{
+  "name": "cpu-temperature",
+  "version": "1.0.0",
+  "description": "An electron app to compare weather and cpu temperature",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandeepnij90/cpu-temperature.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sandeepnij90/cpu-temperature/issues"
+  },
+  "homepage": "https://github.com/sandeepnij90/cpu-temperature#readme",
+  "devDependencies": {
+    "electron": "^12.0.7"
+  }
+}

@@ -1,4 +1,8 @@
 const { app, BrowserWindow } = require('electron')
+require('systeminformation');
+
+app.allowRendererProcessReuse = false
+
 const path = require('path')
 
 const createWindow = () => {
@@ -10,9 +14,12 @@ const createWindow = () => {
         }
     })
     win.loadFile('index.html')
+    win.webContents.openDevTools()
+
 }
 
 app.whenReady().then(() => {
+
     createWindow()
 
     app.on('activate', () => {

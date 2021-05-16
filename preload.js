@@ -9,10 +9,9 @@ const setCPUTemperature = async () => {
 }
 
 const setAmbientTemperature = async () => {
-    const {latitude, longitude} = await getLocation()
+    const { latitude, longitude } = await getLocation()
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${weatherAPI}&units=metric`)
     const { main: { temp } } = await response.json()
-    console.log(temp)
     document.getElementById('temp').innerText = `${Math.ceil(temp)}°C`
 }
 

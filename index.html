@@ -5,9 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Temperature Comparison</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        html, body{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: grid;
+            align-content: center;
+            justify-items: center;
+            font-family: 'Roboto', sans-serif;
+        }
+    .wrapper {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 300px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title {
+        grid-row: 1;
+        grid-column: 1 / 3;
+        text-align: center;
+    }
+
+    .temp-wrapper {
+        width: 50%;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        text-align: center;
+        margin: auto;
+    } 
+    </style>
 </head>
 <body style="background: white;">
-    <h1>Does the weather influence my computer’s core temperature? </h1>
-    <p id="replace">This will be replace</p>
+    <div class="wrapper">
+    <h1 class="title">Does the weather influence my computer’s core temperature? </h1>
+        <div class="temp-wrapper">
+            <h4>CPU temperature</h4>
+            <p id="cpu">loading...</p>
+        </div>
+        <div class="temp-wrapper">
+            <h4>Ambient temperature</h4>
+            <p id="temp">loading..</p>
+        </div>
+    </div>
 </body>
 </html>

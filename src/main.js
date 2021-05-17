@@ -10,10 +10,10 @@ const createWindow = () => {
         width: 800,
         height: 800,
         webPreferences: {
-            preload: path.join(__dirname, 'preload.js')
+            preload: path.join(__dirname, './preload.js')
         }
     })
-    win.loadFile('index.html')
+    win.loadFile(path.join(__dirname, 'static/index.html'))
     win.webContents.openDevTools()
 
 }

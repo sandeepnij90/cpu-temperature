@@ -2,7 +2,7 @@
   "name": "cpu-temperature",
   "version": "1.0.0",
   "description": "An electron app to compare weather and cpu temperature",
-  "main": "main.js",
+  "main": "./src/main.js",
   "scripts": {
     "start": "electron ."
   },
